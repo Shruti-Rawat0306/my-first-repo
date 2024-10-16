@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*  nav{
+        height: 500px;
+        background-color: red;
+    }
+  nav div{
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        margin-top: 10px;
+    }*/
+        nav {
+            padding: 15px;
+            align-items: baseline;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(204, 246, 232);
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 20px;
+        }
+
+        .webname {
+            font-size: 30px;
+            font-weight: bolder;
+
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        .div {
+            height: 200px;
+            border: 10px solid black;
+            background-color: blue;
+            margin: 40px;
+        }
+
+        .second-div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 50px 0px;
+        }
+
+        .img-parent,
+        .heading-parent {
+            width: 40%;
+        }
+
+        .img2 {
+            width: 500px;
+
+        }
+
+        .heading-parent>p {
+            margin: 15px 0px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+        }
+
+        .card-parent {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+
+        }
+
+        .card {
+            width: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            align-items: center;
+        }
+
+
+        .imgcard {
+            width: 100px;
+        }
+
+        .videosection {
+            display: grid;
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin: 30px auto;
+            background-image: url(image\ copy.png);
+            color: white;
+            padding: 30px;
+
+        }
+
+        .heading-div {
+            font-weight: bold;
+            font-size: x-large;
+            text-align: center;
+
+        }
+
+        .heading-div hr {
+            width: 300px;
+            text-align: center;
+            margin: 30px auto !important;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .video1 {
+            width: 100%
+        }
+
+        .btn2 {
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        .btn2:hover {
+            background-color: grey;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 10px 30px;
+        }
+
+        .form {
+            width: 80%;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 45%;
+            padding: 10px;
+        }
+
+        .fullinput {
+            width: 91%;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @media screen and (max-width:500px) {
+            nav {
+                flex-direction: column;
+                background-color: red;
+            }
+
+            .second-div {
+                flex-direction: column;
+            }
+
+            .img-parent,
+            .heading-parent {
+                width: 100%;
+                padding: 10px 20px;
+            }
+
+            .img2 {
+                width: 100%;
+            }
+
+            .videosection {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .contact {
+                grid-template-columns: repeat(1, 1fr) !important;
+                text-align: center;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+            /*  .iframe
+            {
+                width: 100%;
+            }
+            input[type="text"],input[type="email"]
+            {
+                width: 45%;
+                padding: 10px;
+            }
+            .fullinput{
+                width: 91%;
+                margin: 10px 0px;
+                padding: 10px;
+            }*/
+        }
+
+        @media screen and (min-width:501px) and (max-width:650px) {
+            nav {
+                background-color: aqua;
+            }
+
+            .second-div {
+                flex-direction: column;
+            }
+
+            .img-parent,
+            .heading-parent {
+                width: 100%;
+                padding: 10px 20px;
+            }
+
+            .img2 {
+                aspect-ratio: 2/1.1;
+                object-fit: covers;
+            }
+
+            .videosection {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .contact {
+                grid-template-columns: repeat(1, 1fr);
+                text-align: center;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (min-width:651px) and (max-width:900px) {
+            nav {
+                background-color: yellow;
+            }
+
+            .second-div {
+                flex-direction: column;
+            }
+
+            .img-parent,
+            .heading-parent {
+                width: 100%;
+                padding: 10px 20px;
+            }
+
+            .img2 {
+                width: 100%;
+            }
+
+            .videosection {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .contact {
+                grid-template-columns: repeat(1, 1fr) !important;
+                text-align: center;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+            .video1 {
+                width: 300px;
+            }
+        }
+
+        @media screen and (min-width:901px) and (max-width:1100px) {
+            nav {
+                background-color: blue;
+            }
+
+            .second-div {
+                flex-direction: column;
+            }
+
+            .img-parent,
+            .heading-parent {
+                width: 100%;
+                padding: 10px 20px;
+            }
+
+            .img2 {
+                width: 100%;
+            }
+
+            .videosection {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .contact {
+                grid-template-columns: repeat(1, 1fr) !important;
+                text-align: center;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <nav>
+        <div class="webname">mywebpage.in</div>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#Our">Our</a></li>
+        </ul>
+    </nav>
+    <div class="second-div" id="Home">
+        <div class="heading-parent">
+            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum rerum expedita dolorum fuga? Fuga
+                dolorum aut adipisci dolores dolorem, ipsam possimus provident ea, esse rerum, quo in consequuntur odit
+                sed.</h2>
+            <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci temporibus error optio qui nisi
+                tenetur quibusdam numquam distinctio odit magni reiciendis necessitatibus natus, repudiandae quia
+                aliquid vitae rem eos delectus voluptate repellendus porro at molestias consequatur in. Atque esse, quo
+                inventore explicabo velit assumenda eveniet? Ducimus, eum? Magnam amet error sed, est accusamus aperiam
+                voluptas magni aliquam delectus illo eligendi optio hic dolor dolores a alias vero quasi explicabo fuga
+                totam natus distinctio? Numquam commodi eligendi facilis omnis rem dignissimos, eos illum illo nihil
+                Adipisci voluptates delectus ipsam, iure
+                dolorum excepturi fuga iste tempore, veritatis in itaque minima perspiciatis. Esse quaerat
+                exercitationem in sunt architecto, aut quasi. Laudantium, odit rerum? Id nesciunt accusantium quae,
+                atque quasi et libero consectetur numquam.</P>
+            <button class="btn" style="border :2px solid black">button</button>
+        </div>
+        <div class="img-parent">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="uk.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="uk.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="heading-div" id="Services">
+        <h1>Our Services</h1>
+        <hr>
+    </div>
+
+
+    <div class="card-parent">
+        <div class="card">
+            <img src="uk.jpg" alt="image" class="imgcard">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa autem voluptatum.</p>
+        </div>
+
+
+        <div class="card">
+            <img src="uk.jpg" alt="image" class="imgcard">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa autem voluptatum.</p>
+        </div>
+
+
+        <div class="card">
+            <img src="uk.jpg" alt="image" class="imgcard">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa autem voluptatum.</p>
+        </div>
+
+
+        <div class="card">
+            <img src="uk.jpg" alt="image" class="imgcard">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa autem voluptatum.</p>
+        </div>
+
+
+
+        <div class="card">
+            <img src="uk.jpg" alt="image" class="imgcard">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa autem voluptatum.</p>
+        </div>
+
+
+
+        <div class="card">
+            <img src="uk.jpg" alt="image" class="imgcard">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsa autem voluptatum.</p>
+        </div>
+    </div>
+
+
+
+    <div class="videosection" id="Our">
+
+        <video src="fav.mp4" class="video1" controls autoplay loop></video>
+        <div>
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <button class="btn2">Contact</button>
+
+        </div>
+    </div>
+
+    <div class="heading-div" id="Contact">
+        <h1>Contact us</h1>
+        <hr>
+    </div>
+    <div class="contact">
+        <div>
+            <h3>For More Enquiry And Booking- Your Culinary Experience Starts From Here </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eveniet repellendus eum ducimus,
+                facilis nobis!</p>
+            <h2><i class="fa-solid fa-user"></i>Name</h2>
+            <p>Shruti Rawat</p>
+            <h2><i class="fa-solid fa-location-dot"></i>Address</h2>
+            <p>XYZ...Saharanpur,UttarPradesh</p>
+            <h2><i class="fa-solid fa-envelope"></i>Email</h2>
+            <a href="mailto:shrutirawatsre@gmail.com" style="color: blue;">shrutirawatsre@gmail.com</a>
+        </div>
+
+        <div>
+            <h2 class="form">Message Me</h2>
+            <form action="" class="form">
+                <input type="text" name="" placeholder="Name" id="">
+                <input type="email" name="" placeholder="email" id="">
+                <input type="number" class="fullinput" name="" placeholder="phone" id="">
+                <textarea name="" class="fullinput" placeholder="Message" id=""></textarea>
+                <div>
+                    <input type="submit" class="btn-outline-primary">
+                </div>
+            </form>
+            <div class="form">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.0368059964767!2d77.55840427462773!3d29.949619923058968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eeaa79bbbb9b7%3A0xde119cc6657bc63f!2sWHX6%2BRCH%2C%20New%2C%20Bhagat%20Singh%20Colony%2C%20Damodarpuri%2C%20Saharanpur%2C%20Uttar%20Pradesh%20247001!5e0!3m2!1sen!2sin!4v1728628019815!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
